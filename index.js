@@ -1,13 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const Web3 = require('web3');
 const coder = require('web3/lib/solidity/coder');
 const keythereum = require("keythereum");
 const util = require('ethereumjs-util');
-const Wallet = require('./sendTransaction');
 
+const Wallet = require('./wallet');
 const contractAbi = require('./contract.json');
 
-const Web3 = require('web3');
 const web3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/')); // http://d73b3ec9.ngrok.io/
 
 const app = express();
